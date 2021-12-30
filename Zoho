@@ -1,0 +1,47 @@
+using System;
+
+namespace Zoo
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string word = "WATER";
+      int len = word.Length;
+      if(word.Length/2!=0)
+      {
+      	string final = "";
+      	int middle =len/2;
+        for(int i = middle;i<len;i++)
+        {
+        	final = final + word[i];
+         	Console.WriteLine(final); 
+            for(int j =i+1;j<len;j++)
+            {
+            	 final += word[j];
+                 Console.WriteLine(final); 
+             	if (j == (len-1))
+            	{
+            		for(int k=0; k<middle;k++)
+                	{
+                		final += word[k];
+                    	Console.WriteLine(final); 
+            			if(k==middle)
+            			{
+             			break;
+             			}
+             		}
+             	break;
+             	}
+        	}
+            break;
+       }
+            
+      }
+      else
+	  {
+      	Console.WriteLine("Please Provide a valid input");
+      }
+    }
+  }
+}
